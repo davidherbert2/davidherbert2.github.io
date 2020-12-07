@@ -1,0 +1,288 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="last-modified" content="2020-11-30 19:49:51 +0000">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- meta "search-domain" used for google site search function google_search() -->
+    <meta name="search-domain" value="https://swcarpentry.github.io/python-novice-inflammation">
+    <link rel="stylesheet" type="text/css" href="https://swcarpentry.github.io/python-novice-inflammation/assets/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="https://swcarpentry.github.io/python-novice-inflammation/assets/css/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="https://swcarpentry.github.io/python-novice-inflammation/assets/css/lesson.css" />
+    <link rel="stylesheet" type="text/css" href="https://swcarpentry.github.io/python-novice-inflammation/assets/css/syntax.css" />
+    <link rel="license" href="#license-info" />
+
+    
+
+
+
+    <!-- Favicons for everyone -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="Software Carpentry - Programming with Python"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/mstile-310x310.png" />
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+  <title>
+  Additional Exercises &ndash; Programming with Python
+  </title>  
+
+  </head>
+  <body>
+
+    <div class="container">
+
+<h1 class="maintitle">Storing Multiple Values in Lists - Exercises</h1>
+
+<article>
+
+    <blockquote class="challenge">
+  <h2 id="turn-a-string-into-a-list">Turn a String Into a List</h2>
+
+  <p>Use a for-loop to convert the string “hello” into a list of letters:</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="s">'h'</span><span class="p">,</span> <span class="s">'e'</span><span class="p">,</span> <span class="s">'l'</span><span class="p">,</span> <span class="s">'l'</span><span class="p">,</span> <span class="s">'o'</span><span class="p">]</span>
+</code></pre></div>  </div>
+
+  <p>Hint: You can create an empty list like this:</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">my_list</span> <span class="o">=</span> <span class="p">[]</span>
+</code></pre></div>  </div>
+
+  <blockquote class="solution">
+    <h2 id="solution">Solution</h2>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">my_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="s">'hello'</span><span class="p">:</span>
+    <span class="n">my_list</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
+
+<p>Subsets of lists and strings can be accessed by specifying ranges of values in brackets,
+similar to how we accessed ranges of positions in a NumPy array.
+This is commonly referred to as “slicing” the list/string.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">binomial_name</span> <span class="o">=</span> <span class="s">'Drosophila melanogaster'</span>
+<span class="n">group</span> <span class="o">=</span> <span class="n">binomial_name</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'group:'</span><span class="p">,</span> <span class="n">group</span><span class="p">)</span>
+
+<span class="n">species</span> <span class="o">=</span> <span class="n">binomial_name</span><span class="p">[</span><span class="mi">11</span><span class="p">:</span><span class="mi">23</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'species:'</span><span class="p">,</span> <span class="n">species</span><span class="p">)</span>
+
+<span class="n">chromosomes</span> <span class="o">=</span> <span class="p">[</span><span class="s">'X'</span><span class="p">,</span> <span class="s">'Y'</span><span class="p">,</span> <span class="s">'2'</span><span class="p">,</span> <span class="s">'3'</span><span class="p">,</span> <span class="s">'4'</span><span class="p">]</span>
+<span class="n">autosomes</span> <span class="o">=</span> <span class="n">chromosomes</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'autosomes:'</span><span class="p">,</span> <span class="n">autosomes</span><span class="p">)</span>
+
+<span class="n">last</span> <span class="o">=</span> <span class="n">chromosomes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'last:'</span><span class="p">,</span> <span class="n">last</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>group: Drosophila
+species: melanogaster
+autosomes: ['2', '3', '4']
+last: 4
+</code></pre></div></div>
+
+<blockquote class="challenge">
+  <h2 id="slicing-from-the-end">Slicing From the End</h2>
+
+  <p>Use slicing to access only the last four characters of a string or entries of a list.</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">string_for_slicing</span> <span class="o">=</span> <span class="s">'Observation date: 02-Feb-2013'</span>
+<span class="n">list_for_slicing</span> <span class="o">=</span> <span class="p">[[</span><span class="s">'fluorine'</span><span class="p">,</span> <span class="s">'F'</span><span class="p">],</span>
+                    <span class="p">[</span><span class="s">'chlorine'</span><span class="p">,</span> <span class="s">'Cl'</span><span class="p">],</span>
+                    <span class="p">[</span><span class="s">'bromine'</span><span class="p">,</span> <span class="s">'Br'</span><span class="p">],</span>
+                    <span class="p">[</span><span class="s">'iodine'</span><span class="p">,</span> <span class="s">'I'</span><span class="p">],</span>
+                    <span class="p">[</span><span class="s">'astatine'</span><span class="p">,</span> <span class="s">'At'</span><span class="p">]]</span>
+</code></pre></div>  </div>
+
+  <div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'2013'
+[['chlorine', 'Cl'], ['bromine', 'Br'], ['iodine', 'I'], ['astatine', 'At']]
+</code></pre></div>  </div>
+
+  <p>Would your solution work regardless of whether you knew beforehand
+the length of the string or list
+(e.g. if you wanted to apply the solution to a set of lists of different lengths)?
+If not, try to change your approach to make it more robust.</p>
+
+  <p>Hint: Remember that indices can be negative as well as positive</p>
+
+  <blockquote class="solution">
+    <h2 id="solution-1">Solution</h2>
+    <p>Use negative indices to count elements from the end of a container (such as list or string):</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">string_for_slicing</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:]</span>
+<span class="n">list_for_slicing</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:]</span>
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="non-continuous-slices">Non-Continuous Slices</h2>
+
+  <p>So far we’ve seen how to use slicing to take single blocks
+of successive entries from a sequence.
+But what if we want to take a subset of entries
+that aren’t next to each other in the sequence?</p>
+
+  <p>You can achieve this by providing a third argument
+to the range within the brackets, called the <em>step size</em>.
+The example below shows how you can take every third entry in a list:</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">primes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">37</span><span class="p">]</span>
+<span class="n">subset</span> <span class="o">=</span> <span class="n">primes</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">12</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'subset'</span><span class="p">,</span> <span class="n">subset</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>subset [2, 7, 17, 29]
+</code></pre></div>  </div>
+
+  <p>Notice that the slice taken begins with the first entry in the range,
+followed by entries taken at equally-spaced intervals (the steps) thereafter.
+If you wanted to begin the subset with the third entry,
+you would need to specify that as the starting point of the sliced range:</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">primes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">37</span><span class="p">]</span>
+<span class="n">subset</span> <span class="o">=</span> <span class="n">primes</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">12</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'subset'</span><span class="p">,</span> <span class="n">subset</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>subset [5, 13, 23, 37]
+</code></pre></div>  </div>
+
+  <p>Use the step size argument to create a new string
+that contains only every other character in the string
+“In an octopus’s garden in the shade”. Start with
+creating a variable to hold the string:</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">beatles</span> <span class="o">=</span> <span class="s">"In an octopus's garden in the shade"</span>
+</code></pre></div>  </div>
+
+  <p>What slice of <code class="language-plaintext highlighter-rouge">beatles</code> will produce the
+following output (i.e., the first character, third
+character, and every other character through the end
+of the string)?</p>
+  <div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I notpssgre ntesae
+</code></pre></div>  </div>
+
+  <blockquote class="solution">
+    <h2 id="solution-2">Solution</h2>
+    <p>To obtain every other character you need to provide a slice with the step
+size of 2:</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">beatles</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">35</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+</code></pre></div>    </div>
+
+    <p>You can also leave out the beginning and end of the slice to take the whole string
+and provide only the step argument to go every second
+element:</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">beatles</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
+
+<p>If you want to take a slice from the beginning of a sequence, you can omit the first index in the
+range:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">date</span> <span class="o">=</span> <span class="s">'Monday 4 January 2016'</span>
+<span class="n">day</span> <span class="o">=</span> <span class="n">date</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Using 0 to begin range:'</span><span class="p">,</span> <span class="n">day</span><span class="p">)</span>
+<span class="n">day</span> <span class="o">=</span> <span class="n">date</span><span class="p">[:</span><span class="mi">6</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Omitting beginning index:'</span><span class="p">,</span> <span class="n">day</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Using 0 to begin range: Monday
+Omitting beginning index: Monday
+</code></pre></div></div>
+
+<p>And similarly, you can omit the ending index in the range to take a slice to the very end of the
+sequence:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">months</span> <span class="o">=</span> <span class="p">[</span><span class="s">'jan'</span><span class="p">,</span> <span class="s">'feb'</span><span class="p">,</span> <span class="s">'mar'</span><span class="p">,</span> <span class="s">'apr'</span><span class="p">,</span> <span class="s">'may'</span><span class="p">,</span> <span class="s">'jun'</span><span class="p">,</span> <span class="s">'jul'</span><span class="p">,</span> <span class="s">'aug'</span><span class="p">,</span> <span class="s">'sep'</span><span class="p">,</span> <span class="s">'oct'</span><span class="p">,</span> <span class="s">'nov'</span><span class="p">,</span> <span class="s">'dec'</span><span class="p">]</span>
+<span class="n">sond</span> <span class="o">=</span> <span class="n">months</span><span class="p">[</span><span class="mi">8</span><span class="p">:</span><span class="mi">12</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'With known last position:'</span><span class="p">,</span> <span class="n">sond</span><span class="p">)</span>
+<span class="n">sond</span> <span class="o">=</span> <span class="n">months</span><span class="p">[</span><span class="mi">8</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">months</span><span class="p">)]</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Using len() to get last entry:'</span><span class="p">,</span> <span class="n">sond</span><span class="p">)</span>
+<span class="n">sond</span> <span class="o">=</span> <span class="n">months</span><span class="p">[</span><span class="mi">8</span><span class="p">:]</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Omitting ending index:'</span><span class="p">,</span> <span class="n">sond</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>With known last position: ['sep', 'oct', 'nov', 'dec']
+Using len() to get last entry: ['sep', 'oct', 'nov', 'dec']
+Omitting ending index: ['sep', 'oct', 'nov', 'dec']
+</code></pre></div></div>
+
+<blockquote class="challenge">
+  <h2 id="overloading">Overloading</h2>
+
+  <p><code class="language-plaintext highlighter-rouge">+</code> usually means addition, but when used on strings or lists, it means “concatenate”.
+Given that, what do you think the multiplication operator <code class="language-plaintext highlighter-rouge">*</code> does on lists?
+In particular, what will be the output of the following code?</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">counts</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="n">repeats</span> <span class="o">=</span> <span class="n">counts</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="k">print</span><span class="p">(</span><span class="n">repeats</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <ol>
+    <li><code class="language-plaintext highlighter-rouge">[2, 4, 6, 8, 10, 2, 4, 6, 8, 10]</code></li>
+    <li><code class="language-plaintext highlighter-rouge">[4, 8, 12, 16, 20]</code></li>
+    <li><code class="language-plaintext highlighter-rouge">[[2, 4, 6, 8, 10],[2, 4, 6, 8, 10]]</code></li>
+    <li><code class="language-plaintext highlighter-rouge">[2, 4, 6, 8, 10, 4, 8, 12, 16, 20]</code></li>
+  </ol>
+
+  <p>The technical term for this is <em>operator overloading</em>:
+a single operator, like <code class="language-plaintext highlighter-rouge">+</code> or <code class="language-plaintext highlighter-rouge">*</code>,
+can do different things depending on what it’s applied to.</p>
+
+  <blockquote class="solution">
+    <h2 id="solution-3">Solution</h2>
+
+    <p>The multiplication operator <code class="language-plaintext highlighter-rouge">*</code> used on a list replicates elements of the list and concatenates
+them together:</p>
+
+    <div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[2, 4, 6, 8, 10, 2, 4, 6, 8, 10]
+</code></pre></div>    </div>
+
+    <p>It’s equivalent to:</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">counts</span> <span class="o">+</span> <span class="n">counts</span>
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
+
+</article>
+      
+</div>
+
+<script src="https://swcarpentry.github.io/python-novice-inflammation/assets/js/jquery.min.js"></script>
+<script src="https://swcarpentry.github.io/python-novice-inflammation/assets/js/bootstrap.min.js"></script>
+<script src="https://swcarpentry.github.io/python-novice-inflammation/assets/js/lesson.js"></script>
+
+</body>
+</html>
