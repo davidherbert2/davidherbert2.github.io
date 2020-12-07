@@ -1,0 +1,234 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="last-modified" content="2020-11-30 19:49:51 +0000">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- meta "search-domain" used for google site search function google_search() -->
+    <meta name="search-domain" value="https://swcarpentry.github.io/python-novice-inflammation">
+    <link rel="stylesheet" type="text/css" href="https://swcarpentry.github.io/python-novice-inflammation/assets/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="https://swcarpentry.github.io/python-novice-inflammation/assets/css/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="https://swcarpentry.github.io/python-novice-inflammation/assets/css/lesson.css" />
+    <link rel="stylesheet" type="text/css" href="https://swcarpentry.github.io/python-novice-inflammation/assets/css/syntax.css" />
+    <link rel="license" href="#license-info" />
+
+    
+
+
+
+    <!-- Favicons for everyone -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="Software Carpentry - Programming with Python"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/mstile-310x310.png" />
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+  <title>
+  Additional Exercises &ndash; Programming with Python
+  </title>  
+
+  </head>
+  <body>
+
+    <div class="container">
+
+<h1 class="maintitle">Errors and Exceptions - Exercises</h1>
+<blockquote class="challenge">
+<blockquote class="challenge">
+  <h2 id="reading-error-messages">Reading Error Messages</h2>
+
+  <p>Read the Python code and the resulting traceback below, and answer the following questions:</p>
+
+  <ol>
+    <li>How many levels does the traceback have?</li>
+    <li>What is the function name where the error occurred?</li>
+    <li>On which line number in this function did the error occur?</li>
+    <li>What is the type of error?</li>
+    <li>What is the error message?</li>
+  </ol>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># This code has an intentional error. Do not type it directly;
+# use it for reference to understand the error message below.
+</span><span class="k">def</span> <span class="nf">print_message</span><span class="p">(</span><span class="n">day</span><span class="p">):</span>
+    <span class="n">messages</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">'monday'</span><span class="p">:</span> <span class="s">'Hello, world!'</span><span class="p">,</span>
+        <span class="s">'tuesday'</span><span class="p">:</span> <span class="s">'Today is Tuesday!'</span><span class="p">,</span>
+        <span class="s">'wednesday'</span><span class="p">:</span> <span class="s">'It is the middle of the week.'</span><span class="p">,</span>
+        <span class="s">'thursday'</span><span class="p">:</span> <span class="s">'Today is Donnerstag in German!'</span><span class="p">,</span>
+        <span class="s">'friday'</span><span class="p">:</span> <span class="s">'Last day of the week!'</span><span class="p">,</span>
+        <span class="s">'saturday'</span><span class="p">:</span> <span class="s">'Hooray for the weekend!'</span><span class="p">,</span>
+        <span class="s">'sunday'</span><span class="p">:</span> <span class="s">'Aw, the weekend is almost over.'</span>
+    <span class="p">}</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">messages</span><span class="p">[</span><span class="n">day</span><span class="p">])</span>
+
+<span class="k">def</span> <span class="nf">print_friday_message</span><span class="p">():</span>
+    <span class="n">print_message</span><span class="p">(</span><span class="s">'Friday'</span><span class="p">)</span>
+
+<span class="n">print_friday_message</span><span class="p">()</span>
+</code></pre></div>  </div>
+
+  <div class="language-plaintext error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+&lt;ipython-input-1-4be1945adbe2&gt; in &lt;module&gt;()
+     14     print_message('Friday')
+     15
+---&gt; 16 print_friday_message()
+
+&lt;ipython-input-1-4be1945adbe2&gt; in print_friday_message()
+     12
+     13 def print_friday_message():
+---&gt; 14     print_message('Friday')
+     15
+     16 print_friday_message()
+
+&lt;ipython-input-1-4be1945adbe2&gt; in print_message(day)
+      9         'sunday': 'Aw, the weekend is almost over.'
+     10     }
+---&gt; 11     print(messages[day])
+     12
+     13 def print_friday_message():
+
+KeyError: 'Friday'
+</code></pre></div>  </div>
+
+  <blockquote class="solution">
+    <h2 id="solution">Solution</h2>
+    <ol>
+      <li>3 levels</li>
+      <li><code class="language-plaintext highlighter-rouge">print_message</code></li>
+      <li>11</li>
+      <li><code class="language-plaintext highlighter-rouge">KeyError</code></li>
+      <li>There isn’t really a message; you’re supposed to infer that <code class="language-plaintext highlighter-rouge">Friday</code> is not a key in <code class="language-plaintext highlighter-rouge">messages</code>.</li>
+    </ol>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="identifying-syntax-errors">Identifying Syntax Errors</h2>
+
+  <ol>
+    <li>Read the code below, and (without running it) try to identify what the errors are.</li>
+    <li>Run the code, and read the error message. Is it a <code class="language-plaintext highlighter-rouge">SyntaxError</code> or an <code class="language-plaintext highlighter-rouge">IndentationError</code>?</li>
+    <li>Fix the error.</li>
+    <li>Repeat steps 2 and 3, until you have fixed all the errors.</li>
+  </ol>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">another_function</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">'Syntax errors are annoying.'</span><span class="p">)</span>
+   <span class="k">print</span><span class="p">(</span><span class="s">'But at least Python tells us about them!'</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">'So they are usually not too hard to fix.'</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <blockquote class="solution">
+    <h2 id="solution-1">Solution</h2>
+    <p><code class="language-plaintext highlighter-rouge">SyntaxError</code> for missing <code class="language-plaintext highlighter-rouge">():</code> at end of first line,
+<code class="language-plaintext highlighter-rouge">IndentationError</code> for mismatch between second and third lines.
+A fixed version is:</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">another_function</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'Syntax errors are annoying.'</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'But at least Python tells us about them!'</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'So they are usually not too hard to fix.'</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="identifying-variable-name-errors">Identifying Variable Name Errors</h2>
+
+  <ol>
+    <li>Read the code below, and (without running it) try to identify what the errors are.</li>
+    <li>Run the code, and read the error message.
+What type of <code class="language-plaintext highlighter-rouge">NameError</code> do you think this is?
+In other words, is it a string with no quotes,
+a misspelled variable,
+or a variable that should have been defined but was not?</li>
+    <li>Fix the error.</li>
+    <li>Repeat steps 2 and 3, until you have fixed all the errors.</li>
+  </ol>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="c1"># use a if the number is a multiple of 3, otherwise use b
+</span>    <span class="k">if</span> <span class="p">(</span><span class="n">Number</span> <span class="o">%</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="n">message</span> <span class="o">+</span> <span class="n">a</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="n">message</span> <span class="o">+</span> <span class="s">'b'</span>
+<span class="k">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <blockquote class="solution">
+    <h2 id="solution-2">Solution</h2>
+    <p>3 <code class="language-plaintext highlighter-rouge">NameError</code>s for <code class="language-plaintext highlighter-rouge">number</code> being misspelled, for <code class="language-plaintext highlighter-rouge">message</code> not defined,
+and for <code class="language-plaintext highlighter-rouge">a</code> not being in quotes.</p>
+
+    <p>Fixed version:</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">message</span> <span class="o">=</span> <span class="s">''</span>
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="c1"># use a if the number is a multiple of 3, otherwise use b
+</span>    <span class="k">if</span> <span class="p">(</span><span class="n">number</span> <span class="o">%</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="n">message</span> <span class="o">+</span> <span class="s">'a'</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="n">message</span> <span class="o">+</span> <span class="s">'b'</span>
+<span class="k">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="identifying-index-errors">Identifying Index Errors</h2>
+
+  <ol>
+    <li>Read the code below, and (without running it) try to identify what the errors are.</li>
+    <li>Run the code, and read the error message. What type of error is it?</li>
+    <li>Fix the error.</li>
+  </ol>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">seasons</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Spring'</span><span class="p">,</span> <span class="s">'Summer'</span><span class="p">,</span> <span class="s">'Fall'</span><span class="p">,</span> <span class="s">'Winter'</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'My favorite season is '</span><span class="p">,</span> <span class="n">seasons</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+</code></pre></div>  </div>
+
+  <blockquote class="solution">
+    <h2 id="solution-3">Solution</h2>
+    <p><code class="language-plaintext highlighter-rouge">IndexError</code>; the last entry is <code class="language-plaintext highlighter-rouge">seasons[3]</code>, so <code class="language-plaintext highlighter-rouge">seasons[4]</code> doesn’t make sense.
+A fixed version is:</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">seasons</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Spring'</span><span class="p">,</span> <span class="s">'Summer'</span><span class="p">,</span> <span class="s">'Fall'</span><span class="p">,</span> <span class="s">'Winter'</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'My favorite season is '</span><span class="p">,</span> <span class="n">seasons</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
+
+</article>
+      
+</div>
+
+<script src="https://swcarpentry.github.io/python-novice-inflammation/assets/js/jquery.min.js"></script>
+<script src="https://swcarpentry.github.io/python-novice-inflammation/assets/js/bootstrap.min.js"></script>
+<script src="https://swcarpentry.github.io/python-novice-inflammation/assets/js/lesson.js"></script>
+
+</body>
+</html>
