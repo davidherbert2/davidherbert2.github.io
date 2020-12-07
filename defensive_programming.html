@@ -1,0 +1,135 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="last-modified" content="2020-11-30 19:49:51 +0000">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- meta "search-domain" used for google site search function google_search() -->
+    <meta name="search-domain" value="https://swcarpentry.github.io/python-novice-inflammation">
+    <link rel="stylesheet" type="text/css" href="https://swcarpentry.github.io/python-novice-inflammation/assets/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="https://swcarpentry.github.io/python-novice-inflammation/assets/css/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="https://swcarpentry.github.io/python-novice-inflammation/assets/css/lesson.css" />
+    <link rel="stylesheet" type="text/css" href="https://swcarpentry.github.io/python-novice-inflammation/assets/css/syntax.css" />
+    <link rel="license" href="#license-info" />
+
+    
+
+
+
+    <!-- Favicons for everyone -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="Software Carpentry - Programming with Python"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="https://swcarpentry.github.io/python-novice-inflammation/assets/favicons/swc/mstile-310x310.png" />
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+  <title>
+  Additional Exercises &ndash; Programming with Python
+  </title>  
+
+  </head>
+  <body>
+
+    <div class="container">
+
+<h1 class="maintitle">Defensive Programming - Exercises</h1>
+<blockquote class="challenge">
+<blockquote class="challenge">
+  <h2 id="pre--and-post-conditions">Pre- and Post-Conditions</h2>
+
+  <p>Suppose you are writing a function called <code class="language-plaintext highlighter-rouge">average</code> that calculates
+the average of the numbers in a list.
+What pre-conditions and post-conditions would you write for it?
+Compare your answer to your neighbor’s:
+can you think of a function that will pass your tests but not his/hers or vice versa?</p>
+
+  <blockquote class="solution">
+    <h2 id="solution">Solution</h2>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># a possible pre-condition:
+</span><span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_list</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'List length must be non-zero'</span>
+<span class="c1"># a possible post-condition:
+</span><span class="k">assert</span> <span class="n">numpy</span><span class="p">.</span><span class="nb">min</span><span class="p">(</span><span class="n">input_list</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">average</span> <span class="o">&lt;=</span> <span class="n">numpy</span><span class="p">.</span><span class="nb">max</span><span class="p">(</span><span class="n">input_list</span><span class="p">),</span>
+<span class="s">'Average should be between min and max of input values (inclusive)'</span>
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="testing-assertions">Testing Assertions</h2>
+
+  <p>Given a sequence of a number of cars, the function <code class="language-plaintext highlighter-rouge">get_total_cars</code> returns
+the total number of cars.</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">get_total_cars</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+</code></pre></div>  </div>
+
+  <div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>10
+</code></pre></div>  </div>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">get_total_cars</span><span class="p">([</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">])</span>
+</code></pre></div>  </div>
+
+  <div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ValueError: invalid literal for int() with base 10: 'a'
+</code></pre></div>  </div>
+
+  <p>Explain in words what the assertions in this function check,
+and for each one,
+give an example of input that will make that assertion fail.</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_total</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">values</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="nb">int</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+    <span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">element</span><span class="p">)</span> <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">values</span><span class="p">]</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">total</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">total</span>
+</code></pre></div>  </div>
+
+  <blockquote class="solution">
+    <h2 id="solution-1">Solution</h2>
+    <ul>
+      <li>The first assertion checks that the input sequence <code class="language-plaintext highlighter-rouge">values</code> is not empty.
+An empty sequence such as <code class="language-plaintext highlighter-rouge">[]</code> will make it fail.</li>
+      <li>The second assertion checks that each value in the list can be turned into an integer.
+Input such as <code class="language-plaintext highlighter-rouge">[1, 2,'c', 3]</code> will make it fail.</li>
+      <li>The third assertion checks that the total of the list is greater than 0.
+Input such as <code class="language-plaintext highlighter-rouge">[-10, 2, 3]</code> will make it fail.</li>
+    </ul>
+  </blockquote>
+</blockquote>
+
+
+</article>
+      
+</div>
+
+<script src="https://swcarpentry.github.io/python-novice-inflammation/assets/js/jquery.min.js"></script>
+<script src="https://swcarpentry.github.io/python-novice-inflammation/assets/js/bootstrap.min.js"></script>
+<script src="https://swcarpentry.github.io/python-novice-inflammation/assets/js/lesson.js"></script>
+
+</body>
+</html>
