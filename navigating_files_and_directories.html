@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="last-modified" content="2021-06-28 09:34:41 +0000">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- meta "search-domain" used for google site search function google_search() -->
+    <meta name="search-domain" value="http://swcarpentry.github.io/shell-novice">
+    <link rel="stylesheet" type="text/css" href="http://swcarpentry.github.io/shell-novice/assets/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="http://swcarpentry.github.io/shell-novice/assets/css/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="http://swcarpentry.github.io/shell-novice/assets/css/lesson.css" />
+    <link rel="stylesheet" type="text/css" href="http://swcarpentry.github.io/shell-novice/assets/css/syntax.css" />
+
+    
+
+
+
+    <!-- Favicons for everyone -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://swcarpentry.github.io/shell-novice/assets/favicons/swc/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://swcarpentry.github.io/shell-novice/assets/favicons/swc/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://swcarpentry.github.io/shell-novice/assets/favicons/swc/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://swcarpentry.github.io/shell-novice/assets/favicons/swc/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="http://swcarpentry.github.io/shell-novice/assets/favicons/swc/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://swcarpentry.github.io/shell-novice/assets/favicons/swc/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://swcarpentry.github.io/shell-novice/assets/favicons/swc/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://swcarpentry.github.io/shell-novice/assets/favicons/swc/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="http://swcarpentry.github.io/shell-novice/assets/favicons/swc/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="http://swcarpentry.github.io/shell-novice/assets/favicons/swc/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="http://swcarpentry.github.io/shell-novice/assets/favicons/swc/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="http://swcarpentry.github.io/shell-novice/assets/favicons/swc/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="http://swcarpentry.github.io/shell-novice/assets/favicons/swc/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="Software Carpentry - The Unix Shell"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="http://swcarpentry.github.io/shell-novice/assets/favicons/swc/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="http://swcarpentry.github.io/shell-novice/assets/favicons/swc/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="http://swcarpentry.github.io/shell-novice/assets/favicons/swc/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="http://swcarpentry.github.io/shell-novice/assets/favicons/swc/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="http://swcarpentry.github.io/shell-novice/assets/favicons/swc/mstile-310x310.png" />
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+  <title>
+  Navigating Files and Directories &ndash; The Unix Shell
+  </title>  
+  </head>
+  <body>
+
+    <div class="container">
+
+<h1 class="maintitle">Navigating Files and Directories - Exercises</h1>
+
+<article>
+
+  <blockquote class="challenge">
+  <h2 id="absolute-vs-relative-paths">Absolute vs Relative Paths</h2>
+
+  <p>Starting from <code class="language-plaintext highlighter-rouge">/Users/amanda/data</code>,
+which of the following commands could Amanda use to navigate to her home directory,
+which is <code class="language-plaintext highlighter-rouge">/Users/amanda</code>?</p>
+
+  <ol>
+    <li><code class="language-plaintext highlighter-rouge">cd .</code></li>
+    <li><code class="language-plaintext highlighter-rouge">cd /</code></li>
+    <li><code class="language-plaintext highlighter-rouge">cd /home/amanda</code></li>
+    <li><code class="language-plaintext highlighter-rouge">cd ../..</code></li>
+    <li><code class="language-plaintext highlighter-rouge">cd ~</code></li>
+    <li><code class="language-plaintext highlighter-rouge">cd home</code></li>
+    <li><code class="language-plaintext highlighter-rouge">cd ~/data/..</code></li>
+    <li><code class="language-plaintext highlighter-rouge">cd</code></li>
+    <li><code class="language-plaintext highlighter-rouge">cd ..</code></li>
+  </ol>
+
+  <blockquote class="solution">
+    <h2 id="solution-2">Solution</h2>
+    <ol>
+      <li>No: <code class="language-plaintext highlighter-rouge">.</code> stands for the current directory.</li>
+      <li>No: <code class="language-plaintext highlighter-rouge">/</code> stands for the root directory.</li>
+      <li>No: Amanda’s home directory is <code class="language-plaintext highlighter-rouge">/Users/amanda</code>.</li>
+      <li>No: this goes up two levels, i.e. ends in <code class="language-plaintext highlighter-rouge">/Users</code>.</li>
+      <li>Yes: <code class="language-plaintext highlighter-rouge">~</code> stands for the user’s home directory, in this case <code class="language-plaintext highlighter-rouge">/Users/amanda</code>.</li>
+      <li>No: this would navigate into a directory <code class="language-plaintext highlighter-rouge">home</code> in the current directory if it exists.</li>
+      <li>Yes: unnecessarily complicated, but correct.</li>
+      <li>Yes: shortcut to go back to the user’s home directory.</li>
+      <li>Yes: goes up one level.</li>
+    </ol>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="relative-path-resolution">Relative Path Resolution</h2>
+
+  <p>Using the filesystem diagram below, if <code class="language-plaintext highlighter-rouge">pwd</code> displays <code class="language-plaintext highlighter-rouge">/Users/thing</code>,
+what will <code class="language-plaintext highlighter-rouge">ls -F ../backup</code> display?</p>
+
+  <ol>
+    <li><code class="language-plaintext highlighter-rouge">../backup: No such file or directory</code></li>
+    <li><code class="language-plaintext highlighter-rouge">2012-12-01 2013-01-08 2013-01-27</code></li>
+    <li><code class="language-plaintext highlighter-rouge">2012-12-01/ 2013-01-08/ 2013-01-27/</code></li>
+    <li><code class="language-plaintext highlighter-rouge">original/ pnas_final/ pnas_sub/</code></li>
+  </ol>
+
+  <p><img src="http://swcarpentry.github.io/shell-novice/fig/filesystem-challenge.svg" alt="A directory tree below the Users directory where &quot;/Users&quot; contians the
+directories &quot;backup&quot; and &quot;thing&quot;; &quot;/Users/backup&quot; contains &quot;original&quot;,
+&quot;pnas_final&quot; and &quot;pnas_sub&quot;; &quot;/Users/thing&quot; contains &quot;backup&quot;; and
+&quot;/Users/thing/backup&quot; contians &quot;2012-12-01&quot;, &quot;2013-01-08&quot; and
+&quot;2013-01-27&quot;" /></p>
+
+  <blockquote class="solution">
+    <h2 id="solution-3">Solution</h2>
+    <ol>
+      <li>No: there <em>is</em> a directory <code class="language-plaintext highlighter-rouge">backup</code> in <code class="language-plaintext highlighter-rouge">/Users</code>.</li>
+      <li>No: this is the content of <code class="language-plaintext highlighter-rouge">Users/thing/backup</code>,
+but with <code class="language-plaintext highlighter-rouge">..</code> we asked for one level further up.</li>
+      <li>No: see previous explanation.</li>
+      <li>Yes: <code class="language-plaintext highlighter-rouge">../backup/</code> refers to <code class="language-plaintext highlighter-rouge">/Users/backup/</code>.</li>
+    </ol>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="ls-reading-comprehension"><code class="language-plaintext highlighter-rouge">ls</code> Reading Comprehension</h2>
+
+  <p>Using the filesystem diagram below,
+if <code class="language-plaintext highlighter-rouge">pwd</code> displays <code class="language-plaintext highlighter-rouge">/Users/backup</code>,
+and <code class="language-plaintext highlighter-rouge">-r</code> tells <code class="language-plaintext highlighter-rouge">ls</code> to display things in reverse order,
+what command(s) will result in the following output:</p>
+
+  <div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pnas_sub/ pnas_final/ original/
+</code></pre></div>  </div>
+
+  <p><img src="http://swcarpentry.github.io/shell-novice/fig/filesystem-challenge.svg" alt="A directory tree below the Users directory where &quot;/Users&quot; contians the
+directories &quot;backup&quot; and &quot;thing&quot;; &quot;/Users/backup&quot; contains &quot;original&quot;,
+&quot;pnas_final&quot; and &quot;pnas_sub&quot;; &quot;/Users/thing&quot; contains &quot;backup&quot;; and
+&quot;/Users/thing/backup&quot; contians &quot;2012-12-01&quot;, &quot;2013-01-08&quot; and
+&quot;2013-01-27&quot;" /></p>
+
+  <ol>
+    <li><code class="language-plaintext highlighter-rouge">ls pwd</code></li>
+    <li><code class="language-plaintext highlighter-rouge">ls -r -F</code></li>
+    <li><code class="language-plaintext highlighter-rouge">ls -r -F /Users/backup</code></li>
+  </ol>
+
+  <blockquote class="solution">
+    <h2 id="solution-4">Solution</h2>
+    <ol>
+      <li>No: <code class="language-plaintext highlighter-rouge">pwd</code> is not the name of a directory.</li>
+      <li>Yes: <code class="language-plaintext highlighter-rouge">ls</code> without directory argument lists files and directories
+in the current directory.</li>
+      <li>Yes: uses the absolute path explicitly.</li>
+    </ol>
+  </blockquote>
+</blockquote>
+</article>
+      
+    </div>
+    
+<script src="https://swcarpentry.github.io/python-novice-inflammation/assets/js/jquery.min.js"></script>
+<script src="https://swcarpentry.github.io/python-novice-inflammation/assets/js/bootstrap.min.js"></script>
+<script src="https://swcarpentry.github.io/python-novice-inflammation/assets/js/lesson.js"></script>
+
+  </body>
+</html>
