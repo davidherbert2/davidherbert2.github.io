@@ -1,0 +1,284 @@
+<blockquote class="challenge">
+  <h2 id="write-your-own-loop">Write your own loop<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#write-your-own-loop" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+
+  <p>How would you write a loop that echoes all 10 numbers from 0 to 9?</p>
+
+  <blockquote class="solution">
+    <h2 id="solution">Solution<span class="fold-unfold glyphicon glyphicon-collapse-down"></span><a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#solution" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+
+    <div class="language-bash highlighter-rouge" style="display: none;"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="k">for </span>loop_variable <span class="k">in </span>0 1 2 3 4 5 6 7 8 9
+<span class="o">&gt;</span> <span class="k">do</span>
+<span class="o">&gt;</span>     <span class="nb">echo</span> <span class="nv">$loop_variable</span>
+<span class="o">&gt;</span> <span class="k">done</span>
+</code></pre></div>    </div>
+
+    <div class="language-plaintext output highlighter-rouge" style="display: none;"><div class="highlight"><pre class="highlight"><code>0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="variables-in-loops">Variables in Loops<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#variables-in-loops" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+
+  <p>This exercise refers to the <code class="language-plaintext highlighter-rouge">shell-lesson-data/molecules</code> directory.
+<code class="language-plaintext highlighter-rouge">ls</code> gives the following output:</p>
+
+  <div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+</code></pre></div>  </div>
+
+  <p>What is the output of the following code?</p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="k">for </span>datafile <span class="k">in</span> <span class="k">*</span>.pdb
+<span class="o">&gt;</span> <span class="k">do</span>
+<span class="o">&gt;</span>     <span class="nb">ls</span> <span class="k">*</span>.pdb
+<span class="o">&gt;</span> <span class="k">done</span>
+</code></pre></div>  </div>
+
+  <p>Now, what is the output of the following code?</p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="k">for </span>datafile <span class="k">in</span> <span class="k">*</span>.pdb
+<span class="o">&gt;</span> <span class="k">do</span>
+<span class="o">&gt;</span>     <span class="nb">ls</span> <span class="nv">$datafile</span>
+<span class="o">&gt;</span> <span class="k">done</span>
+</code></pre></div>  </div>
+
+  <p>Why do these two loops give different outputs?</p>
+
+  <blockquote class="solution">
+    <h2 id="solution-1">Solution<span class="fold-unfold glyphicon glyphicon-collapse-up"></span><a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#solution-1" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+    <p style="">The first code block gives the same output on each iteration through
+the loop.
+Bash expands the wildcard <code class="language-plaintext highlighter-rouge">*.pdb</code> within the loop body (as well as
+before the loop starts) to match all files ending in <code class="language-plaintext highlighter-rouge">.pdb</code>
+and then lists them using <code class="language-plaintext highlighter-rouge">ls</code>.
+The expanded loop would look like this:</p>
+    <div class="language-bash highlighter-rouge" style=""><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="k">for </span>datafile <span class="k">in </span>cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+<span class="o">&gt;</span> <span class="k">do</span>
+<span class="o">&gt;</span>     <span class="nb">ls </span>cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+<span class="o">&gt;</span> <span class="k">done</span>
+</code></pre></div>    </div>
+
+    <div class="language-plaintext output highlighter-rouge" style=""><div class="highlight"><pre class="highlight"><code>cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+</code></pre></div>    </div>
+
+    <p style="">The second code block lists a different file on each loop iteration.
+The value of the <code class="language-plaintext highlighter-rouge">datafile</code> variable is evaluated using <code class="language-plaintext highlighter-rouge">$datafile</code>,
+and then listed using <code class="language-plaintext highlighter-rouge">ls</code>.</p>
+
+    <div class="language-plaintext output highlighter-rouge" style=""><div class="highlight"><pre class="highlight"><code>cubane.pdb
+ethane.pdb
+methane.pdb
+octane.pdb
+pentane.pdb
+propane.pdb
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="limiting-sets-of-files">Limiting Sets of Files<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#limiting-sets-of-files" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+
+  <p>What would be the output of running the following loop in the
+<code class="language-plaintext highlighter-rouge">shell-lesson-data/molecules</code> directory?</p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="k">for </span>filename <span class="k">in </span>c<span class="k">*</span>
+<span class="o">&gt;</span> <span class="k">do</span>
+<span class="o">&gt;</span>     <span class="nb">ls</span> <span class="nv">$filename</span>
+<span class="o">&gt;</span> <span class="k">done</span>
+</code></pre></div>  </div>
+
+  <ol>
+    <li>No files are listed.</li>
+    <li>All files are listed.</li>
+    <li>Only <code class="language-plaintext highlighter-rouge">cubane.pdb</code>, <code class="language-plaintext highlighter-rouge">octane.pdb</code> and <code class="language-plaintext highlighter-rouge">pentane.pdb</code> are listed.</li>
+    <li>Only <code class="language-plaintext highlighter-rouge">cubane.pdb</code> is listed.</li>
+  </ol>
+
+  <blockquote class="solution">
+    <h2 id="solution-2">Solution<span class="fold-unfold glyphicon glyphicon-collapse-down"></span><a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#solution-2" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+    <p style="display: none;">4 is the correct answer. <code class="language-plaintext highlighter-rouge">*</code> matches zero or more characters, so any file name starting with
+the letter c, followed by zero or more other characters will be matched.</p>
+  </blockquote>
+
+  <p>How would the output differ from using this command instead?</p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="k">for </span>filename <span class="k">in</span> <span class="k">*</span>c<span class="k">*</span>
+<span class="o">&gt;</span> <span class="k">do</span>
+<span class="o">&gt;</span>     <span class="nb">ls</span> <span class="nv">$filename</span>
+<span class="o">&gt;</span> <span class="k">done</span>
+</code></pre></div>  </div>
+
+  <ol>
+    <li>The same files would be listed.</li>
+    <li>All the files are listed this time.</li>
+    <li>No files are listed this time.</li>
+    <li>The files <code class="language-plaintext highlighter-rouge">cubane.pdb</code> and <code class="language-plaintext highlighter-rouge">octane.pdb</code> will be listed.</li>
+    <li>Only the file <code class="language-plaintext highlighter-rouge">octane.pdb</code> will be listed.</li>
+  </ol>
+
+  <blockquote class="solution">
+    <h2 id="solution-3">Solution<span class="fold-unfold glyphicon glyphicon-collapse-down"></span><a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#solution-3" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+    <p style="display: none;">4 is the correct answer. <code class="language-plaintext highlighter-rouge">*</code> matches zero or more characters, so a file name with zero or more
+characters before a letter c and zero or more characters after the letter c will be matched.</p>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="saving-to-a-file-in-a-loop---part-one">Saving to a File in a Loop - Part One<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#saving-to-a-file-in-a-loop---part-one" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+
+  <p>In the <code class="language-plaintext highlighter-rouge">shell-lesson-data/molecules</code> directory, what is the effect of this loop?</p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>alkanes <span class="k">in</span> <span class="k">*</span>.pdb
+<span class="k">do
+    </span><span class="nb">echo</span> <span class="nv">$alkanes</span>
+    <span class="nb">cat</span> <span class="nv">$alkanes</span> <span class="o">&gt;</span> alkanes.pdb
+<span class="k">done</span>
+</code></pre></div>  </div>
+
+  <ol>
+    <li>Prints <code class="language-plaintext highlighter-rouge">cubane.pdb</code>, <code class="language-plaintext highlighter-rouge">ethane.pdb</code>, <code class="language-plaintext highlighter-rouge">methane.pdb</code>, <code class="language-plaintext highlighter-rouge">octane.pdb</code>, <code class="language-plaintext highlighter-rouge">pentane.pdb</code> and
+   <code class="language-plaintext highlighter-rouge">propane.pdb</code>, and the text from <code class="language-plaintext highlighter-rouge">propane.pdb</code> will be saved to a file called <code class="language-plaintext highlighter-rouge">alkanes.pdb</code>.</li>
+    <li>Prints <code class="language-plaintext highlighter-rouge">cubane.pdb</code>, <code class="language-plaintext highlighter-rouge">ethane.pdb</code>, and <code class="language-plaintext highlighter-rouge">methane.pdb</code>, and the text from all three files
+would be concatenated and saved to a file called <code class="language-plaintext highlighter-rouge">alkanes.pdb</code>.</li>
+    <li>Prints <code class="language-plaintext highlighter-rouge">cubane.pdb</code>, <code class="language-plaintext highlighter-rouge">ethane.pdb</code>, <code class="language-plaintext highlighter-rouge">methane.pdb</code>, <code class="language-plaintext highlighter-rouge">octane.pdb</code>, and <code class="language-plaintext highlighter-rouge">pentane.pdb</code>,
+and the text from <code class="language-plaintext highlighter-rouge">propane.pdb</code> will be saved to a file called <code class="language-plaintext highlighter-rouge">alkanes.pdb</code>.</li>
+    <li>None of the above.</li>
+  </ol>
+
+  <blockquote class="solution">
+    <h2 id="solution-4">Solution<span class="fold-unfold glyphicon glyphicon-collapse-down"></span><a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#solution-4" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+    <ol style="display: none;">
+      <li>The text from each file in turn gets written to the <code class="language-plaintext highlighter-rouge">alkanes.pdb</code> file.
+However, the file gets overwritten on each loop iteration, so the final content of <code class="language-plaintext highlighter-rouge">alkanes.pdb</code>
+is the text from the <code class="language-plaintext highlighter-rouge">propane.pdb</code> file.</li>
+    </ol>
+  </blockquote>
+</blockquote>
+
+
+<blockquote class="challenge">
+  <h2 id="saving-to-a-file-in-a-loop---part-two">Saving to a File in a Loop - Part Two<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#saving-to-a-file-in-a-loop---part-two" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+
+  <p>Also in the <code class="language-plaintext highlighter-rouge">shell-lesson-data/molecules</code> directory,
+what would be the output of the following loop?</p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>datafile <span class="k">in</span> <span class="k">*</span>.pdb
+<span class="k">do
+    </span><span class="nb">cat</span> <span class="nv">$datafile</span> <span class="o">&gt;&gt;</span> all.pdb
+<span class="k">done</span>
+</code></pre></div>  </div>
+
+  <ol>
+    <li>All of the text from <code class="language-plaintext highlighter-rouge">cubane.pdb</code>, <code class="language-plaintext highlighter-rouge">ethane.pdb</code>, <code class="language-plaintext highlighter-rouge">methane.pdb</code>, <code class="language-plaintext highlighter-rouge">octane.pdb</code>, and
+<code class="language-plaintext highlighter-rouge">pentane.pdb</code> would be concatenated and saved to a file called <code class="language-plaintext highlighter-rouge">all.pdb</code>.</li>
+    <li>The text from <code class="language-plaintext highlighter-rouge">ethane.pdb</code> will be saved to a file called <code class="language-plaintext highlighter-rouge">all.pdb</code>.</li>
+    <li>All of the text from <code class="language-plaintext highlighter-rouge">cubane.pdb</code>, <code class="language-plaintext highlighter-rouge">ethane.pdb</code>, <code class="language-plaintext highlighter-rouge">methane.pdb</code>, <code class="language-plaintext highlighter-rouge">octane.pdb</code>, <code class="language-plaintext highlighter-rouge">pentane.pdb</code>
+and <code class="language-plaintext highlighter-rouge">propane.pdb</code> would be concatenated and saved to a file called <code class="language-plaintext highlighter-rouge">all.pdb</code>.</li>
+    <li>All of the text from <code class="language-plaintext highlighter-rouge">cubane.pdb</code>, <code class="language-plaintext highlighter-rouge">ethane.pdb</code>, <code class="language-plaintext highlighter-rouge">methane.pdb</code>, <code class="language-plaintext highlighter-rouge">octane.pdb</code>, <code class="language-plaintext highlighter-rouge">pentane.pdb</code>
+and <code class="language-plaintext highlighter-rouge">propane.pdb</code> would be printed to the screen and saved to a file called <code class="language-plaintext highlighter-rouge">all.pdb</code>.</li>
+  </ol>
+
+  <blockquote class="solution">
+    <h2 id="solution-5">Solution<span class="fold-unfold glyphicon glyphicon-collapse-down"></span><a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#solution-5" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+    <p style="display: none;">3 is the correct answer. <code class="language-plaintext highlighter-rouge">&gt;&gt;</code> appends to a file, rather than overwriting it with the redirected
+output from a command.
+Given the output from the <code class="language-plaintext highlighter-rouge">cat</code> command has been redirected, nothing is printed to the screen.</p>
+  </blockquote>
+</blockquote>
+
+
+<blockquote class="challenge">
+  <h2 id="doing-a-dry-run">Doing a Dry Run<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#doing-a-dry-run" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+
+  <p>A loop is a way to do many things at once — or to make many mistakes at
+once if it does the wrong thing. One way to check what a loop <em>would</em> do
+is to <code class="language-plaintext highlighter-rouge">echo</code> the commands it would run instead of actually running them.</p>
+
+  <p>Suppose we want to preview the commands the following loop will execute
+without actually running those commands:</p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="k">for </span>datafile <span class="k">in</span> <span class="k">*</span>.pdb
+<span class="o">&gt;</span> <span class="k">do</span>
+<span class="o">&gt;</span>     <span class="nb">cat</span> <span class="nv">$datafile</span> <span class="o">&gt;&gt;</span> all.pdb
+<span class="o">&gt;</span> <span class="k">done</span>
+</code></pre></div>  </div>
+
+  <p>What is the difference between the two loops below, and which one would we
+want to run?</p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Version 1</span>
+<span class="nv">$ </span><span class="k">for </span>datafile <span class="k">in</span> <span class="k">*</span>.pdb
+<span class="o">&gt;</span> <span class="k">do</span>
+<span class="o">&gt;</span>     <span class="nb">echo cat</span> <span class="nv">$datafile</span> <span class="o">&gt;&gt;</span> all.pdb
+<span class="o">&gt;</span> <span class="k">done</span>
+</code></pre></div>  </div>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Version 2</span>
+<span class="nv">$ </span><span class="k">for </span>datafile <span class="k">in</span> <span class="k">*</span>.pdb
+<span class="o">&gt;</span> <span class="k">do</span>
+<span class="o">&gt;</span>     <span class="nb">echo</span> <span class="s2">"cat </span><span class="nv">$datafile</span><span class="s2"> &gt;&gt; all.pdb"</span>
+<span class="o">&gt;</span> <span class="k">done</span>
+</code></pre></div>  </div>
+
+  <blockquote class="solution">
+    <h2 id="solution-6">Solution<span class="fold-unfold glyphicon glyphicon-collapse-down"></span><a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#solution-6" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+    <p style="display: none;">The second version is the one we want to run.
+This prints to screen everything enclosed in the quote marks, expanding the
+loop variable name because we have prefixed it with a dollar sign.
+It also <em>does not</em> modify nor create the file <code class="language-plaintext highlighter-rouge">all.pdb</code>, as the <code class="language-plaintext highlighter-rouge">&gt;&gt;</code>
+is treated literally as part of a string rather than as a
+redirection instruction.</p>
+
+    <p style="display: none;">The first version appends the output from the command <code class="language-plaintext highlighter-rouge">echo cat $datafile</code>
+to the file, <code class="language-plaintext highlighter-rouge">all.pdb</code>. This file will just contain the list;
+<code class="language-plaintext highlighter-rouge">cat cubane.pdb</code>, <code class="language-plaintext highlighter-rouge">cat ethane.pdb</code>, <code class="language-plaintext highlighter-rouge">cat methane.pdb</code> etc.</p>
+
+    <p style="display: none;">Try both versions for yourself to see the output! Be sure to open the
+<code class="language-plaintext highlighter-rouge">all.pdb</code> file to view its contents.</p>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="nested-loops">Nested Loops<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#nested-loops" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+
+  <p>Suppose we want to set up a directory structure to organize
+some experiments measuring reaction rate constants with different compounds
+<em>and</em> different temperatures.  What would be the
+result of the following code:</p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="k">for </span>species <span class="k">in </span>cubane ethane methane
+<span class="o">&gt;</span> <span class="k">do</span>
+<span class="o">&gt;</span>     <span class="k">for </span>temperature <span class="k">in </span>25 30 37 40
+<span class="o">&gt;</span>     <span class="k">do</span>
+<span class="o">&gt;</span>         <span class="nb">mkdir</span> <span class="nv">$species</span>-<span class="nv">$temperature</span>
+<span class="o">&gt;</span>     <span class="k">done</span>
+<span class="o">&gt;</span> <span class="k">done</span>
+</code></pre></div>  </div>
+
+  <blockquote class="solution">
+    <h2 id="solution-7">Solution<span class="fold-unfold glyphicon glyphicon-collapse-down"></span><a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#solution-7" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+    <p style="display: none;">We have a nested loop, i.e. contained within another loop, so for each species
+in the outer loop, the inner loop (the nested loop) iterates over the list of
+temperatures, and creates a new directory for each combination.</p>
+
+    <p style="display: none;">Try running the code for yourself to see which directories are created!</p>
+  </blockquote>
+</blockquote>
+
+
+
+
